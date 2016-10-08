@@ -39,8 +39,9 @@ public class Conexion {
             this.estado = Estado.CERRADO;
         } else if (this.estado == Estado.ESPERANDO) {
             throw new UnsupportedOperationException("Acción no permitida... ");
+        }else{
+            assert false : "estado imposible";
         }
-        assert false : "estado imposible";
     }
 
     public void parar() {
@@ -51,8 +52,9 @@ public class Conexion {
             this.estado = Estado.PARADO;
         } else if (this.estado == Estado.ESPERANDO) {
             throw new UnsupportedOperationException("Acción no permitida... ");
+        }else{
+            assert false : "estado imposible";
         }
-        assert false : "estado imposible";
     }
 
     public void iniciar() {
@@ -63,8 +65,9 @@ public class Conexion {
         } else if (this.estado == Estado.PREPARADO) {
         } else if (this.estado == Estado.ESPERANDO) {
             throw new UnsupportedOperationException("Acción no permitida... ");
+        }else{
+            assert false : "estado imposible";
         }
-        assert false : "estado imposible";
     }
 
     public void enviar(String msg) {
@@ -77,8 +80,9 @@ public class Conexion {
             this.estado = Estado.ESPERANDO;
         } else if (this.estado == Estado.ESPERANDO) {
             throw new UnsupportedOperationException("Acción no permitida... ");
+        }else{
+            assert false : "estado imposible";
         }
-        assert false : "estado imposible";
     }
 
     public void recibir(int respuesta) {
@@ -94,8 +98,9 @@ public class Conexion {
             } else {
                 this.estado = Estado.CERRADO;
             }
+        }else{
+            assert false : "estado imposible";
         }
-        assert false : "estado imposible";
     }
 
 }
