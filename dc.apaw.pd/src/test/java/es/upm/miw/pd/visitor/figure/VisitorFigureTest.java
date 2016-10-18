@@ -14,10 +14,26 @@ public class VisitorFigureTest {
     @Before
     public void getDatos(){
         figures=new ArrayList<Figure>();
+        figures.add(new Circle(5));
+        figures.add(new Triangle(2,3));
+        figures.add(new Square(4));
     }
     @Test
-    public void test() {
-        fail("Not yet implemented");
+    public void testArea() {
+        Functions area=new Area();
+        for(Figure figure:figures){
+        	figure.accept(area);
+        }
+        assertEquals(97.5,area.getCounter(),10e-1);
+    }
+    
+    @Test
+    public void testNumberOfSides() {
+    	 Functions numberOfSides=new NumberOfSides();
+         for(Figure figure:figures){
+         	figure.accept(numberOfSides);
+         }
+         assertEquals(7,numberOfSides.getCounter(),10e-5);
     }
 
 }

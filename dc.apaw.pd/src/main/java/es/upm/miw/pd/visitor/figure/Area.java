@@ -4,20 +4,17 @@ public class Area extends Functions{
 
     @Override
     public void visitElementCircle(Circle circle) {
-        // TODO Auto-generated method stub
-        
+       this.incrementCounter(Math.PI*circle.getRadio()*circle.getRadio());
     }
 
     @Override
     public void visitElementSquare(Square square) {
-        // TODO Auto-generated method stub
-        
+        this.incrementCounter(square.getSide()*square.getSide());
     }
 
     @Override
     public void visitElementTriangle(Triangle triangle) {
-        // TODO Auto-generated method stub
-        
+        this.incrementCounter(triangle.getBase()*triangle.getHeight()/2);
     }
 
 }
