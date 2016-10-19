@@ -14,8 +14,17 @@ public class FactoryMethodTest {
 		List<Creator> creators=new ArrayList<Creator>();
 		creators.add(new CreatorNaturalNumberEs());
 		creators.add(new CreatorNaturalNumberEn());
-		assertEquals(creators.get(0).createNaturalNumber().getTextValue(),"cero");
-		assertEquals(creators.get(1).createNaturalNumber().getTextValue(),"zero");
+		assertEquals("cero", creators.get(0).createNaturalNumber().getTextValue());
+		assertEquals("zero", creators.get(1).createNaturalNumber().getTextValue());
+	}
+	
+	@Test
+	public void constructorsWithValues() {
+		List<Creator> creators=new ArrayList<Creator>();
+		creators.add(new CreatorNaturalNumberEs());
+		creators.add(new CreatorNaturalNumberEn());
+		assertEquals("dos", creators.get(0).createNaturalNumber(2).getTextValue());
+		assertEquals("two", creators.get(1).createNaturalNumber(2).getTextValue());
 	}
 
 }
