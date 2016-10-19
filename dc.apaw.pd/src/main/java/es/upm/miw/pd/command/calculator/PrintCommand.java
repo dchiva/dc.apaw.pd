@@ -10,6 +10,7 @@ public class PrintCommand extends AccionesCalculadora {
 
     @Override
     public void execute() {
+    	IO.getIO().clear();
         IO.getIO().print(this.getCalculadora().getTotal());
     }
 

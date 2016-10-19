@@ -9,9 +9,9 @@ public abstract class AccionesCalculadora implements Comando{
     }
     
     public void setCalculadora(Calculator calculadora){
-        if(calculadora==null){
+    	if(this.calculadora==null){
             this.calculadora=calculadora;
-        }
+    	}
     }
 
 }
