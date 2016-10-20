@@ -15,12 +15,6 @@ public abstract class EditorComponent extends Editor{
 		this.editorComponents.add(editor);
 	}
 	
-	public void removeEditorComponent(Editor editor){
-		int elementPosition=this.editorComponents.indexOf(editor);
-		if(elementPosition>0){
-			this.editorComponents.remove(elementPosition);
-		}
-	}
 	@Override
 	public String draw(boolean forceUpperCase) {
 		String result="";
@@ -30,5 +24,19 @@ public abstract class EditorComponent extends Editor{
 		result+=this.getFooter();
 		return result;
 	}
+	
+	@Override
+	public boolean isCharacter() {
+		return false;
+	}
+	
+	@Override
+	public void remove(Editor editor) {
+		int elementPosition=this.editorComponents.indexOf(editor);
+		if(elementPosition>0){
+			this.editorComponents.remove(elementPosition);
+		}
+	}
+	
 	abstract String getFooter();
 }
