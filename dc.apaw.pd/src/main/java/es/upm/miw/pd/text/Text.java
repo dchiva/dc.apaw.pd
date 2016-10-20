@@ -8,7 +8,10 @@ public class Text extends EditorComponent{
 	}
 
 	@Override
-	public void add(Editor editor) {
+	public void add(Editor editor) throws UnsupportedOperationException{
+		if(editor.isCharacter()){
+			throw new UnsupportedOperationException();
+		}
 		this.addEditorComponent(editor);
 	}
 
@@ -19,7 +22,7 @@ public class Text extends EditorComponent{
 
 	@Override
 	String getFooter() {
-		return "/n---o---/n";
+		return "---o---\n";
 	}
 
 }

@@ -27,7 +27,7 @@ public class TextTest {
 
     @Test
     public void testCaracterFlyweight() {
-        assertSame(H, CharactersFactory.getCharactersFactory().getCharacter('H').draw(false));
+        assertSame(H, CharactersFactory.getCharactersFactory().getCharacter('H'));
     }
 
     @Test

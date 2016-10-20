@@ -25,9 +25,11 @@ public class EditorCharacter extends Editor{
 
 	@Override
 	public String draw(boolean forceUpperCase) {
-		String result=""+this.character;
+		String result="";
 		if(forceUpperCase){
 			result+=Character.toUpperCase(this.character.charValue());
+		}else{
+			result+=this.character;
 		}
 		return result;
 	}
