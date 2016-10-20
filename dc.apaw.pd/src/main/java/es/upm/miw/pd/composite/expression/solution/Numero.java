@@ -9,18 +9,6 @@ public class Numero extends Expresion{
     }
 
     @Override
-    public void add(Expresion expresion) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void remove(Expresion expresion) {
-        // TODO Auto-generated method stub
- 
-    }
-
-    @Override
     public int operar() {
         // TODO Auto-generated method stub
         return this.numero;

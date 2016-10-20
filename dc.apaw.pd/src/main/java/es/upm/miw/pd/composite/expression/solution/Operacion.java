@@ -9,18 +9,6 @@ public abstract class Operacion extends Expresion{
         private Expresion expresion1;
         
         private Expresion expresion2;
-        
-        @Override
-        public void add(Expresion expresion) {
-            
-            
-        }
-        
-        @Override
-        public void remove(Expresion expresion) {
-            // TODO Auto-generated method stub
-            
-        }
 
         public String toString(){
             return '('+this.expresion1.toString()+signoOperacion+this.expresion2.toString()+')';
